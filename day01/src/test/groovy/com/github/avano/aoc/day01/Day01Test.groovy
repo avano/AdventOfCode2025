@@ -4,11 +4,11 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 
-import com.github.avano.aoc.support.AocTestSupport
+import com.github.avano.aoc.support.AocSupport
 
 import java.util.stream.Stream
 
-class Day01Test extends AocTestSupport {
+class Day01Test extends AocSupport {
 	@ParameterizedTest
 	@MethodSource('part1')
 	void part1Test(List<String> input, int result) {

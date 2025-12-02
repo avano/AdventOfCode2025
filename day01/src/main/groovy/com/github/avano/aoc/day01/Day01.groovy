@@ -1,8 +1,8 @@
 package com.github.avano.aoc.day01
 
-import com.github.avano.aoc.support.AocTestSupport
+import com.github.avano.aoc.support.AocSupport
 
-class Day01 extends AocTestSupport {
+class Day01 extends AocSupport {
 	static int part1(List<String> input = inputFile(Day01.class, 'input')) {
 		int zeroes = 0
 		int current = 50
