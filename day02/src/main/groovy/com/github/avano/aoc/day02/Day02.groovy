@@ -3,7 +3,7 @@ package com.github.avano.aoc.day02
 import com.github.avano.aoc.support.AocSupport
 
 class Day02 extends AocSupport {
-	static long part1(List<String> input = inputFile(Day02.class, 'input', ',')) {
+	static long part1(List<String> input = inputFileAs(delimiter: ',', Day02.class, List.class)) {
 		long result = 0
 		for (final def line in input) {
 			def (left, right) = line.split('-')*.toString()
@@ -37,12 +37,11 @@ class Day02 extends AocSupport {
 					break
 				}
 			}
-
 		}
 		result
 	}
 
-	static long part2(List<String> input = inputFile(Day02.class, 'input', ',')) {
+	static long part2(List<String> input = inputFileAs(delimiter: ',', Day02.class, List.class)) {
 		long result = 0
 		Set<Long> dupes = []
 		for (final def line in input) {
@@ -56,7 +55,6 @@ class Day02 extends AocSupport {
 			} else {
 				result += count(left, right, dupes)
 			}
-
 		}
 		result
 	}

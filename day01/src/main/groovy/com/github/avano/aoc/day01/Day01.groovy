@@ -3,7 +3,7 @@ package com.github.avano.aoc.day01
 import com.github.avano.aoc.support.AocSupport
 
 class Day01 extends AocSupport {
-	static int part1(List<String> input = inputFile(Day01.class, 'input')) {
+	static int part1(List<String> input = inputFileAs(Day01.class, List.class)) {
 		int zeroes = 0
 		int current = 50
 
@@ -24,7 +24,7 @@ class Day01 extends AocSupport {
 		return zeroes
 	}
 
-	static int part2(List<String> input = inputFile(Day01.class, 'input')) {
+	static int part2(List<String> input = inputFileAs(Day01.class, List.class)) {
 		int zeroes = 0
 		int current = 50
 

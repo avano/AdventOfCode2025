@@ -23,13 +23,13 @@ class Day02Test extends AocSupport {
 
 	static Stream<Arguments> part1() {
 		return Stream.of(
-				Arguments.of(testFile('example', ','), 1227775554)
+				Arguments.of(testFileAs(delimiter: ',', List.class), 1227775554)
 		)
 	}
 
 	static Stream<Arguments> part2() {
 		return Stream.of(
-				Arguments.of(testFile('example', ','), 4174379265)
+				Arguments.of(testFileAs(delimiter: ',', List.class), 4174379265)
 		)
 	}
 }

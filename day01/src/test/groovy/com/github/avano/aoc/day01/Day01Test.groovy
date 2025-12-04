@@ -23,7 +23,7 @@ class Day01Test extends AocSupport {
 
 	static Stream<Arguments> part1() {
 		return Stream.of(
-				Arguments.of(testFile('example'), 3)
+				Arguments.of(testFileAs(List.class), 3)
 		)
 	}
 
@@ -39,7 +39,7 @@ class Day01Test extends AocSupport {
 				Arguments.of(['L50'], 1),
 				Arguments.of(['L50', 'L1'], 1),
 				Arguments.of(['L51', 'R1'], 2),
-				Arguments.of(testFile('example'), 6)
+				Arguments.of(testFileAs(List.class), 6)
 		)
 	}
 }

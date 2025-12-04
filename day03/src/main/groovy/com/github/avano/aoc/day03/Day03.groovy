@@ -3,7 +3,7 @@ package com.github.avano.aoc.day03
 import com.github.avano.aoc.support.AocSupport
 
 class Day03 extends AocSupport {
-	static int part1(List<String> input = inputFile(Day03.class, 'input')) {
+	static int part1(List<String> input = inputFileAs(Day03.class, List.class)) {
 		int first, second, result = 0
 		for (final String line in input) {
 			first = line[0] as int
@@ -24,7 +24,7 @@ class Day03 extends AocSupport {
 		result
 	}
 
-	static long part2(List<String> input = inputFile(Day03.class, 'input')) {
+	static long part2(List<String> input = inputFileAs(Day03.class, List.class)) {
 		long result = 0
 		for (final String line in input) {
 			int exponent = 11
