@@ -12,15 +12,11 @@ class AocMap {
 		}
 	}
 
-	AocMap(char[][] array) {
-		this.array = array
-	}
-
 	char get(int x, int y) {
 		array[y][x]
 	}
 
-	void set(int x, int y, String value) {
+	void set(int x, int y, char value) {
 		array[y][x] = value as char
 	}
 
@@ -56,5 +52,13 @@ class AocMap {
 		}
 
 		result
+	}
+
+	int rows() {
+		array.length
+	}
+
+	int columns() {
+		array[0].length
 	}
 }

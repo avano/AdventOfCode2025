@@ -4,11 +4,14 @@ import com.github.avano.aoc.support.AocMap
 import com.github.avano.aoc.support.AocSupport
 
 class Day04 extends AocSupport {
-	static int part1(AocMap input = inputFileAs(fileName: 'input', Day04.class, AocMap.class)) {
+	static final char ROLL = '@'
+	static final char EMPTY = '.'
+
+	static int part1(AocMap map = inputFileAs(fileName: 'input', Day04.class, AocMap.class)) {
 		int result = 0
 
-		input.forEachCell { int x, int y ->
-			if (input.get(x, y) == '@' as char && input.adjacent8(x, y).findAll { it == '@' }.size() < 4) {
+		map.forEachCell { int x, int y ->
+			if (map.get(x, y) == ROLL && map.adjacent8(x, y).findAll { it == ROLL }.size() < 4) {
 				result++
 			}
 		}
@@ -16,16 +19,16 @@ class Day04 extends AocSupport {
 		result
 	}
 
-	static int part2(AocMap input = inputFileAs(fileName: 'input', Day04.class, AocMap.class)) {
+	static int part2(AocMap map = inputFileAs(fileName: 'input', Day04.class, AocMap.class)) {
 		int result = 0
 
 		boolean changed = true
 		while (changed) {
 			changed = false
-			input.forEachCell { int x, int y ->
-				if (input.get(x, y) == '@' as char && input.adjacent8(x, y).findAll { it == '@' }.size() < 4) {
+			map.forEachCell { int x, int y ->
+				if (map.get(x, y) == ROLL && map.adjacent8(x, y).findAll { it == ROLL }.size() < 4) {
 					result++
-					input.set(x, y, '.')
+					map.set(x, y, EMPTY)
 					changed = true
 				}
 			}
