@@ -3,10 +3,10 @@ package com.github.avano.aoc.support
 class Pos {
 	int x, y, z
 
-	Pos(int x, int y, int z) {
-		this.x = x
-		this.y = y
-		this.z = z
+	Pos(List<Integer> coordinates) {
+		this.x = coordinates[0]
+		this.y = coordinates[1]
+		this.z = coordinates[2] ?: 0
 	}
 
 	double distance(Pos other) {

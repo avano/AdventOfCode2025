@@ -45,8 +45,7 @@ class Day08 extends AocSupport {
 
 	static List<Pos> parse(List<String> input) {
 		input.collect { it ->
-			def (x, y, z) = it.split(',')*.toInteger()
-			new Pos(x, y, z)
+			new Pos(it.split(',')*.toInteger())
 		}
 	}
 
